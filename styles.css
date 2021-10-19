@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Garamond, Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    background-color: black;
+    user-select: none;
+}
+
+/* @supports (-webkit-text-stroke: 1px rgba(0, 0, 0, 0.5)) {
+    body {
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+        -webkit-text-fill-color: rgb(175, 175, 175);
+    }
+} */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+.metronome {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vh;
+  height: auto;
+}
+
+.bpm-display {
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.bpm-display .tempo{
+    font-size: 4em;
+}
+
+.tempo-settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.tempo-settings .adjust-tempo-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: smaller;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 125, 30, 0.5);
+    text-align: center;
+    cursor: pointer;
+}
+
+.tempo-settings .adjust-tempo-button:hover{
+    background: white;
+    color: rgba(0, 125, 30, 0.5);
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    background-color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgba(0, 125, 30, 0.5);
+    cursor: pointer;
+    margin-top: -8px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-moz-range-thumb{
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgba(0, 125, 30, 0.5);
+    cursor: pointer;
+    border: none;
+}
+
+.start-stop {
+    width: 50px;
+    height: 50px;
+    font-size: .75em;
+    text-align: center;
+    background-color: rgba(0, 125, 30, 0.5);
+    border-radius: 50%;
+    color: white;
+    margin: 0 auto;
+    cursor: pointer;
+    line-height: 50px;
+}
+
+.start-stop:hover {
+    background-color: rgba(0, 125, 30, 0.75);
+}
+
+.measures {
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+}
+
+.measures .stepper {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 125, 30, 0.5);
+    text-align: center;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.measures .stepper:hover {
+    background: white;
+    color: rgba(0, 125, 30, 0.5);
+}
+
+.measures .add-beats {
+    line-height: 20px;
+}
+
+.tempo-text, .beats-per-measure-text {
+    display: flex;
+    padding: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    justify-content: center;
+    font-size: 0.5em;
+    text-transform: uppercase;
+}
